@@ -1,72 +1,70 @@
-# 🎧 Audio Signal Classification using Machine Learning & Deep Learning  
+# 🎧 Audio Signal Classification using ML & Deep Learning  
 *Kaggle Competition Project*
 
 ## 📌 Project Overview
 This project was developed as part of a Kaggle audio classification competition.  
-The objective was to analyze raw audio signals, extract meaningful acoustic features, and build predictive models to accurately classify audio samples into predefined categories.
+The goal was to process raw audio signals, extract meaningful acoustic features, and build predictive models capable of accurately classifying audio samples into predefined categories.
 
-The project includes both:
-- A traditional Machine Learning pipeline
-- A Deep Learning-based approach using neural networks
-
-This allowed performance comparison between feature-based ML models and end-to-end DL models.
+The project combines both traditional Machine Learning techniques and Deep Learning approaches to evaluate performance differences and build a robust classification system.
 
 ---
 
-## 🏆 Kaggle Competition
-This project was built for a Kaggle audio classification challenge where participants were required to:
+## 🏆 Kaggle Competition Context
+The competition required participants to:
 
 - Process raw `.wav` audio files
-- Perform feature extraction from time and frequency domains
-- Train predictive models
-- Optimize performance based on competition evaluation metrics
+- Perform time-domain and frequency-domain feature extraction
+- Train classification models
+- Optimize performance based on evaluation metrics
 - Generate submission files for leaderboard ranking
 
 ---
 
-## ⚙️ Technical Approach
+## ⚙️ Technical Implementation
 
-### 🔹 1. Machine Learning Pipeline
+### 🔹 1️⃣ Machine Learning Pipeline
 
-**Audio Preprocessing**
-- Noise handling
-- Audio normalization
-- Signal trimming
+**Audio Processing**
+- Signal loading using `librosa`
+- Audio normalization & trimming
+- Noise handling and signal cleaning
+- Efficient data processing with `tqdm` for progress tracking
 
 **Feature Engineering**
 - MFCC (Mel-Frequency Cepstral Coefficients)
-- Chroma features
-- Spectral centroid
+- Chroma Features
+- Spectral Centroid
+- Spectral Bandwidth
 - Zero Crossing Rate
-- Spectral bandwidth & rolloff
+- Spectral Rolloff
 
 **Models Used**
 - Random Forest Classifier
 - XGBoost Classifier
 
-**Techniques Applied**
+**Optimization Techniques**
 - Feature scaling
 - Cross-validation
 - Hyperparameter tuning
-- Model comparison
+- Model performance comparison
 
 ---
 
-### 🔹 2. Deep Learning Pipeline
+### 🔹 2️⃣ Deep Learning Pipeline
 
-- Conversion of audio signals into Spectrograms / Mel-Spectrograms
-- Convolutional Neural Network (CNN) implementation using TensorFlow / Keras
-- Regularization techniques (Dropout, Batch Normalization)
-- Model evaluation on validation set
-- Performance comparison with ML models
+- Conversion of audio signals into Mel-Spectrograms
+- CNN-based architecture using TensorFlow / Keras
+- Regularization (Dropout, Batch Normalization)
+- Validation-based model selection
+- Performance comparison against ML models
 
 ---
 
-## 📊 Results
-- Compared performance of Random Forest, XGBoost, and CNN models
-- Evaluated using competition metric
-- Generated leaderboard submission files
-- Analyzed strengths of feature-based vs deep learning approaches
+## 📊 Results & Analysis
+- Evaluated model performance using competition metrics
+- Compared Random Forest, XGBoost, and CNN results
+- Generated Kaggle-compatible submission files
+- Observed differences between feature-engineered ML models and end-to-end deep learning models
 
 ---
 
@@ -77,14 +75,14 @@ This project was built for a Kaggle audio classification challenge where partici
 - Scikit-learn
 - XGBoost
 - TensorFlow / Keras
+- tqdm (Pipeline Progress Monitoring)
 - Matplotlib
 
 ---
 
 ## 🚀 Key Learnings
 - Audio signal processing fundamentals
-- Feature engineering for sound classification
-- Boosting algorithms (XGBoost) in structured audio features
-- CNN-based learning on spectrogram images
-- End-to-end ML pipeline development for Kaggle competitions
-
+- Advanced feature engineering for acoustic data
+- Ensemble learning with Random Forest & XGBoost
+- CNN-based learning on spectrogram representations
+- End-to-end Kaggle competition workflow
